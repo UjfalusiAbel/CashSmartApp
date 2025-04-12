@@ -12,7 +12,7 @@ services:
       - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=ujfalusiabel@ujfalusi.info"
+      - "--certificatesresolvers.myresolver.acme.email=ujfalusiabel@meloptica.stream"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
       - "--api.dashboard=true"
     ports:
@@ -61,7 +61,7 @@ services:
       - traefik
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.api.rule=Host(`api.ujfalusiabel.com`)"
+      - "traefik.http.routers.api.rule=Host(`api.meloptica.stream`)"
       - "traefik.http.routers.api.entrypoints=websecure"
       - "traefik.http.routers.api.tls.certresolver=myresolver"
 
@@ -73,12 +73,12 @@ services:
       api:
         condition: service_healthy
     environment:
-      - NEXT_PUBLIC_API_URL=https://api.ujfalusiabel.com
+      - NEXT_PUBLIC_API_URL=https://api.meloptica.stream
     networks:
       - traefik
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.webapp.rule=Host(`ujfalusiabel.com`)"
+      - "traefik.http.routers.webapp.rule=Host(`meloptica.stream`)"
       - "traefik.http.routers.webapp.entrypoints=websecure"
       - "traefik.http.routers.webapp.tls.certresolver=myresolver"
       - "traefik.http.services.webapp.loadbalancer.server.port=3000"
