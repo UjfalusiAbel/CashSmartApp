@@ -1,0 +1,6 @@
+[submodule "cassini-web"]
+	path = cassini-web
+	url = git@github.com:UjfalusiAbel/cassini-web.git
+[submodule "CashSmart"]
+	path = CashSmart
+	url = git@github.com:UjfalusiAbel/CashSmart.git
