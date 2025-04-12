@@ -1,6 +1,6 @@
-[submodule "cassini-web"]
-	path = cassini-web
-	url = git@github.com:UjfalusiAbel/cassini-web.git
 [submodule "CashSmart"]
 	path = CashSmart
 	url = git@github.com:UjfalusiAbel/CashSmart.git
+[submodule "cash-smart-web"]
+	path = cash-smart-web
+	url = git@github.com:UjfalusiAbel/cash-smart-web.git
